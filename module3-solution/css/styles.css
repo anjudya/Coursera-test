@@ -1,4 +1,8 @@
 
+.container {
+	margin: 0;
+	padding: 0;
+}
 #main-heading {
 	margin-top: 15px;
 	margin-bottom: 20px;
@@ -24,12 +28,8 @@
 }
 .navbar-brand h1 {
 	color: #000000;
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-left: 0;
-	clear: left;
-	float: left;
-	position: absolute;
+	margin: 0;
+	padding-left: 25px;
 }
 .navbar-brand a:hover, .navbar-brand a:focus{
 	text-decoration: none;
