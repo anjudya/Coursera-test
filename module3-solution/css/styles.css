@@ -27,6 +27,8 @@
 	margin-top: 0;
 	margin-bottom: 0;
 	margin-left: 0;
+	clear: left;
+	float: left;
 	position: absolute;
 }
 .navbar-brand a:hover, .navbar-brand a:focus{
