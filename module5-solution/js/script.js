@@ -101,7 +101,7 @@ function buildAndShowHomeHTML (categories) {
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
-       //var chosenCategoryShortName = chooseRandomCategory.category.short_name;
+        var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
 
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
@@ -111,14 +111,12 @@ function buildAndShowHomeHTML (categories) {
       // syntax because the substitution of {{randomCategoryShortName}} becomes an argument
       // being passed into the $dc.loadMenuItems function. Think about what that argument needs
       // to look like. For example, a valid call would look something like this:
-      //$dc.loadMenuItems({{chosenCategoryShortName}})
+       chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-      //var homeHtmlToInsertIntoMainPage = buildCategoriesViewHtml(categories,
-       //                             categoriesTitleHtml,
-         //                           categoryHtml);
-         // insertHtml("#main-content", categoriesViewHtml);
+       insertHtml('#main-content', homeHtmlToInsertIntoMainPage);
 
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
